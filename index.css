@@ -1,0 +1,895 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Secular+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Raleway:wght@200;400;800&family=Russo+One&family=Tilt+Warp&display=swap');
+*{
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Raleway', sans-serif;
+    background-color: white;
+}
+
+
+.header {
+    background-image: url(img/rashford-header.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    animation: opacity 2s;
+  }
+
+  @keyframes opacity {
+    0%{
+      opacity: 0;
+    }
+  }
+  
+  .navbar {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: fit-content;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 2rem;
+    padding-right: 3rem;
+    z-index: 9999;
+    animation: head 2s;
+  }
+
+  @keyframes head {
+    0%{
+      opacity: 0;
+      margin-top: -10vh;
+    }
+  }
+  
+  .logo img {
+    padding-top: 0.5rem;
+    width: 5rem;
+    height: 5.5rem;
+  }
+  
+  .menu-toggle {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 5px;
+  }
+  
+  .hamburger {
+    z-index:9999;
+    width: 30px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .hamburger span {
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    transition: transform 0.3s ease;
+  }
+  
+  .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.854);
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+  
+.menu.active {
+    opacity: 1;
+    visibility: visible;
+}
+  
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+  
+.menu li {
+    margin-bottom: 20px;
+}
+  
+.menu li a {
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+  
+.menu li a:hover {
+    color: rgb(161, 13, 36);
+}
+
+.desktop-nav{
+    width: 100%;
+    height: fit-content;
+}
+
+.desktop-nav li{
+    font-size: 1.1rem;
+    margin: 0 5%;
+    list-style: none;
+    text-transform: uppercase;
+    padding-block: 30px;
+}
+
+.desktop-nav li a{
+    list-style: none;
+    color: white;
+    text-decoration: none;
+}
+    
+.desktop-nav ul{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#about{
+  background-color: white;
+    width: 100%;
+    height: fit-content;
+    display: grid;
+    grid-template-rows: 500px 100px;
+    grid-template-columns: 1fr 30px 30px 30px 30px 30px 1fr;
+    align-items: center;
+    justify-items: center;
+    margin: 0;
+    text-align: center;
+    padding-top: 30px;
+}
+
+main#carousel {
+    grid-row: 1 / 2;
+    grid-column: 1 / 8;
+    width: 80%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    perspective: 600px;
+    --items: 5;
+    --middle: 3;
+    --position: 1;
+    pointer-events: none;
+  }
+  
+  div.item {
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    --r: calc(var(--position) - var(--offset));
+    --abs: max(calc(var(--r) * -1), var(--r));
+    transition: all 0.25s linear;
+    transform: rotateY(calc(-10deg * var(--r)))
+      translateX(calc(-300px * var(--r)));
+    z-index: calc((var(--position) - var(--abs)));
+  }
+
+  div.item{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(img/header.jpeg);
+  }
+
+
+  .text-inside{
+    font-size: 2rem;
+    font-family: 'Secular One', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: 100%;
+    color: rgb(50, 50, 50);
+
+  }
+
+  .text-inside img{
+    height: 100px;
+  }
+
+  #first,#third,#fifth{
+    background-color: rgba(0, 0, 0, 0.176);
+  }
+  #second,#fourth{
+    background-color: rgba(255, 0, 0, 0.176);
+  }
+
+  
+  div.item:nth-of-type(1) {
+    --offset: 1;
+    background-image: url(img/header.jpeg);
+  }
+  div.item:nth-of-type(2) {
+    --offset: 2;
+    background-position: left;
+  }
+  div.item:nth-of-type(3) {
+    --offset: 3;
+  }
+  div.item:nth-of-type(4) {
+    --offset: 4;
+    background-position: right;
+  }
+  div.item:nth-of-type(5) {
+    --offset: 5;
+  }
+  
+  input:nth-of-type(1) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+  input:nth-of-type(1):checked ~ main#carousel {
+    --position: 1;
+  }
+  
+  input:nth-of-type(2) {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+  }
+  input:nth-of-type(2):checked ~ main#carousel {
+    --position: 2;
+  }
+  
+  input:nth-of-type(3) {
+    grid-column: 4 /5;
+    grid-row: 2 / 3;
+  }
+  input:nth-of-type(3):checked ~ main#carousel {
+    --position: 3;
+  }
+  
+  input:nth-of-type(4) {
+    grid-column: 5 / 6;
+    grid-row: 2 / 3;
+  }
+  input:nth-of-type(4):checked ~ main#carousel {
+    --position: 4;
+  }
+  
+  input:nth-of-type(5) {
+    grid-column: 6 / 7;
+    grid-row: 2 / 3;
+  }
+  input:nth-of-type(5):checked ~ main#carousel {
+    --position: 5;
+  }
+  input[type="radio"] {
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid grey; /* Set the border color to red */
+    border-radius: 50%;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  input[type="radio"]:checked {
+    border-color: rgb(161, 13, 36); /* Set the border color to red when the radio button is checked */
+  }
+  
+  /* Optional: To change the color of the radio button indicator */
+  input[type="radio"]:checked::before {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(161, 13, 36); /* Set the indicator color to red */
+    border-radius: 50%;
+    margin: 10px;
+  }
+
+  #players{
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.65);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(161, 13, 36);
+    height: fit-content;
+    padding-bottom: 5%;
+    margin-bottom: 5%;
+  }
+
+  .title{
+    margin-right: auto;
+    margin-left: auto;
+    background-color: rgb(255, 255, 255);
+    color: rgb(161, 13, 36);
+    width: 100%;
+    height: fit-content;
+    font-size: 3rem;
+    font-family: 'Secular One', sans-serif;
+    padding-block: 2%;
+    margin-bottom: 5%;
+  }
+  .info{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    border-radius: 15%;
+  }
+
+  .info > *{
+  color: rgba(255, 255, 255, 0.794);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-family: 'Secular One', sans-serif;
+  }
+
+  .number{
+    background-color: white;
+    color: black;
+    font-size: 3rem;
+    flex: 1;
+  }
+
+  .name{
+    background-color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    flex: 2;
+  }
+  .grid {
+    width: 90%;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    gap: 2em;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "player1 player2 player3 player4"
+      "player5 player6 player7 player8"
+      "player9 player10 player11 player12"
+      "player13 player14 player15 player16"
+      "player17 player18 player19 player20"
+      "player21 player22 player23 player24"
+      "player25 player26 player27 player28";
+  }
+  .grid > *{
+    border-radius: 15%;
+    height: 45vh;
+    display: flex; 
+    align-items: flex-end; 
+    text-align: center;
+    justify-content: center;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgb(45,46,46);
+    background-color: radial-gradient(circle, rgba(45,46,46,1) 0%, rgba(99,99,99,1) 84%);
+     
+  }
+  
+  .player1 { grid-area: player1; background-image: url(img/degea.png);
+  }
+  
+  .player2 { grid-area: player2;background-image: url(img/heaton.png); }
+  
+  .player3 { grid-area: player3; background-image: url(img/henderson.png);}
+  
+  .player4 { grid-area: player4;background-image: url(img/butland.png); }
+  
+  .player5 { grid-area: player5; background-image: url(img/lindelof.png); }
+  
+  .player6 { grid-area: player6;background-image: url(img/maguire.png); }
+  
+  .player7 { grid-area: player7; background-image: url(img/martinez.png); }
+  
+  .player8 { grid-area: player8; background-image: url(img/malacia.png);}
+  
+  .player9 { grid-area: player9; background-image: url(img/varane.png); }
+  
+  .player10 { grid-area: player10; background-image: url(img/dalot.png);}
+  
+  .player11 { grid-area: player11; background-image: url(img/shaw.png);}
+  
+  .player12 { grid-area: player12; background-image: url(img/wanbissaka.png);}
+  
+  .player13 { grid-area: player13; background-image: url(img/bruno.png); }
+  
+  .player14 { grid-area: player14;background-image: url(img/eriksen.png);}
+  
+  .player15 { grid-area: player15;background-image: url(img/sabitzer.png); }
+  
+  .player16 { grid-area: player16; background-image: url(img/fred.png); }
+  
+  .player17 { grid-area: player17; background-image: url(img/casemiro.png);}
+  
+  .player18 { grid-area: player18; background-image: url(img/pellistri.png); }
+  
+  .player19 { grid-area: player19; background-image: url(img/vandebeek.png);}
+  
+  .player20 { grid-area: player20; background-image: url(img/mctominay.png); }
+  
+  .player21 { grid-area: player21; background-image: url(img/martial.png);}
+  
+  .player22 { grid-area: player22; background-image: url(img/marcus.png); }
+  
+  .player23 { grid-area: player23; background-image: url(img/antony.png);}
+  
+  .player24 { grid-area: player24; background-image: url(img/sancho.png);}
+  
+  .player25 { grid-area: player25; background-image: url(img/weghorst.png);}
+  
+  .player26 { grid-area: player26; background-image: url(img/elanga.png); }
+  
+  .player27 { grid-area: player27; background-image: url(img/garnacho.png);}
+
+  #coach{
+    width: 100%;
+    background-color: white;
+    height: 90vh;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(img/tenhagwallpaper.jpg);
+  }
+
+  #options{
+    text-align: left;
+  }
+  #design{
+    margin-bottom: 8%;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.65);
+    padding-bottom: 5%;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    height: fit-content;
+    background-color: rgb(161, 13, 36);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+
+  #design .title{
+    background-color: rgb(236, 236, 236);
+  }
+  #kit {
+    border: 1px solid black;
+    width: 200px;
+    height: 300px;
+    background-color: white;
+    position: relative;
+    margin-bottom: 20px;
+  }
+  #sleeve,#sleeve2{
+    border: 1px solid black;
+    background-color: white;
+    width: 70px;
+    margin-bottom: 220px;
+    height: 100px;
+  }
+  #kit.stripes {
+    background-image: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 10px,
+      #fff 10px,
+      #fff 20px
+    );
+  }
+  
+  #logo {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 25%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+  }
+
+  #sponsor{
+    width: 150px;
+    height: 60px;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+  }
+
+  #shirt{
+    display: flex;
+  }
+
+  #sponsor.sponsor1{
+    background-image: url(img/teamviewer.png);
+  }
+  #sponsor.sponsor2{
+    background-image: url(img/kohler.png);
+  }
+  #sponsor.sponsor3{
+    background-image: url(img/adidas.png);
+  }
+  
+  #logo.logo1 {
+    background-image: url(img/logo.png);
+  }
+  
+  #logo.logo2 {
+    background-image: url(img/devil.png);
+  }
+  
+  #logo.logo3 {
+    background-image: url(img/logo-black.png);
+  }
+
+  #options {
+    margin-top: 20px;
+  }
+  
+  #news{
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding-bottom: 10%;
+  }
+  .offers{
+    display: flex;
+    width: 80%;
+    height: 50vh;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #offer1{
+    background-image: url(img/rashy-award.avif);
+    margin-bottom: -50px;
+    margin-right: 20px;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+
+  #offer2{
+    background-image: url(img/degea-award.webp);
+    margin-top: -50px;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  #offer2:hover{
+    transform: translateY(-30px);
+  }
+  #offer3{
+    background-image: url(img/united.jpg);
+    transition: transform 0.2s ease-in-out;
+    margin-bottom: -50px;
+    margin-left: 20px;
+  }
+
+  #offer1:hover, #offer3:hover {
+    transform: translateY(-30px);
+  }
+  .offer{
+    cursor: pointer;
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+    justify-content: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.65);
+    flex: 1;
+}
+
+.offer p {
+  font-size: 1rem;
+  color: #3c3b3b;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  height: 20%;
+  width: 100%;
+}
+a{
+  text-decoration: none;
+}
+
+#fantasy{
+  width: 100%;
+  margin-bottom: 8%;
+  display: flex;
+  height: fit-content;
+  background-image: url(img/celebrating.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Secular One', sans-serif;
+  font-size: 2rem;
+
+}
+.premier{
+  background-image: url(img/premier.png);
+  background-size: 50%;
+}
+.button {
+  display: inline-block;
+  width: fit-content;
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;  
+  background-color: rgb(161, 13, 36);
+  color: #FFFFFF;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #45a049;
+}
+
+#fantasy > *{
+  padding-block: 15%;
+  color: rgb(92, 92, 92);
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  text-align: left;
+  justify-content: center;
+  flex: 1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(255, 255, 255, 0.704);
+  padding-right: 5%;
+}
+
+#footer{
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+.second-footer{
+  margin-block: 3%;
+}
+
+.first-footer{
+  display: flex;
+  width: 100%;
+}
+
+.footer-logo{
+  flex: 1;
+}
+
+.footer-logo img{
+  height: 100px;
+}
+#footer .desktop-nav{
+  flex: 2;
+}
+
+#footer .desktop-nav a{
+  color: black;
+}
+.fantasy-header p{
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+}
+
+@media only screen and (max-width: 700px) {
+    .navbar{
+        display: flex;
+    }
+    #footer .desktop-nav{
+      display: block;
+    }
+    .desktop-nav{
+        display: none;
+    }
+  }
+  @media (max-width: 1000px) {
+    .offers{
+      width: 65%;
+     display: block;
+     height: fit-content;
+    }
+  
+    #offer1{
+      margin-right: 0;
+      margin-bottom: 50px;
+    }
+    #offer2{
+      margin-top: 0;
+      margin-bottom: 50px;
+    }
+  
+    #offer3{
+      margin-left: 0;
+      margin-bottom: 50px;
+    }
+    .offer{
+      height: 280px;
+    }
+    #news{
+      height: fit-content;
+    }
+    .grid {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas:
+        "player1 player2 player3"
+        "player4 player5 player6"
+        "player7 player8 player9"
+        "player10 player11 player12"
+        "player13 player14 player15"
+        "player16 player17 player18"
+        "player19 player20 player21"
+        "player22 player23 player24"
+        "player25 player26 player27"
+        "player28 player29 player30";
+    }
+  }
+  @media (max-width: 800px) {
+    #coach,#news{
+      margin-top: -100px;
+    }
+    .first-footer{
+      display: block;
+    }
+    #footer .desktop-nav ul li{
+      margin-top: -30px;
+    }
+    .footer-logo{
+      margin-bottom: 5%;
+    }
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas:
+      "player1 player2"
+      "player3 player4"
+      "player5 player6"
+      "player7 player8"
+      "player9 player10"
+      "player11 player12"
+      "player13 player14"
+      "player15 player16"
+      "player17 player18"
+      "player19 player20"
+      "player21 player22"
+      "player23 player24"
+      "player25 player26"
+      "player27 player28"
+      "player29 player30";
+    }
+  }
+
+  @media (max-width: 650px) {
+    #design{
+      width: 80%;
+    }
+    .desktop-nav ul{
+      flex-direction: column;
+    }
+    #logo{
+      width: 40px;
+      height: 40px;
+    }
+    #sponsor{
+      width: 120px;
+      height: 40px;
+    }
+    #kit{
+      width: 150px;
+    height: 250px;
+    }
+    .grid > *{
+      width: 70%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .grid {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "player1"
+        "player2"
+        "player3"
+        "player4"
+        "player5"
+        "player6"
+        "player7"
+        "player8"
+        "player9"
+        "player10"
+        "player11"
+        "player12"
+        "player13"
+        "player14"
+        "player15"
+        "player16"
+        "player17"
+        "player18"
+        "player19"
+        "player20"
+        "player21"
+        "player22"
+        "player23"
+        "player24"
+        "player25"
+        "player26"
+        "player27"
+        "player28"
+        "player29"
+        "player30";
+    }
+  }
+  @media (max-width: 400px) {
+    #design{
+      width: 100%;
+    }
+    #kit{
+      width: 120px;
+      height: 200px;
+    }
+  }
