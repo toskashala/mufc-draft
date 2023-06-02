@@ -1,122 +1,22 @@
+/* Importing Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Secular+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Raleway:wght@200;400;800&family=Russo+One&family=Tilt+Warp&display=swap');
 
+/* Styling for the body element */
 body{
-   background-color: rgb(235, 235, 235);
-   text-align: center;
-   margin: 0;
-   padding: 0;
-   font-size: 14px;
+  background-color: rgb(235, 235, 235);
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
 }
+
+/* Styling for all elements */
 *{
   scroll-behavior: smooth;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-#field{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    background-image: url(img/Football_field.svg.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: fit-content;
-
-}
-
-#title{
-    display: flex;
-    text-align: center;
-    align-items: center;
-    width: fit-content;
-    margin: auto;
-    justify-content: center;
-    font-size: 1.5rem;
-    font-family: 'Secular One', sans-serif;
-    height: 8vh;
-    color: rgb(53, 10, 62);
-    margin-bottom: 5%;
-}
-
-#about{
-    box-shadow:
-    1px 2.6px 13.8px rgba(0, 0, 0, 0.121),
-    2.3px 6.3px 33.3px rgba(0, 0, 0, 0.166),
-    4.4px 11.8px 62.6px rgba(0, 0, 0, 0.193),
-    7.8px 21px 111.7px rgba(0, 0, 0, 0.204),
-    14.6px 39.3px 208.9px rgba(0, 0, 0, 0.198),
-    35px 94px 500px rgba(0, 0, 0, 0.16);
-    color: rgb(53, 10, 62);
-    width: 60%;
-    height: fit-content;
-    padding: 7%;
-    background-color: rgb(219, 219, 219);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    word-wrap: break-word;
-    font-size: 1.2rem;
-    margin-left: auto;
-    margin-right: auto;
-    font-family: 'Raleway', sans-serif;
-    margin-block: 8%;
-    
-}
-
-.teams{
-    display: flex;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    height: 35vh;
-    margin-bottom: 10%;
-}
-
-.teams > *{
-    box-shadow:
-  1px 2.6px 13.8px rgba(0, 0, 0, 0.121),
-  2.3px 6.3px 33.3px rgba(0, 0, 0, 0.166),
-  4.4px 11.8px 62.6px rgba(0, 0, 0, 0.193),
-  7.8px 21px 111.7px rgba(0, 0, 0, 0.204),
-  14.6px 39.3px 208.9px rgba(0, 0, 0, 0.198),
-  35px 94px 500px rgba(0, 0, 0, 0.16);
-    flex: 1;
-    background-position: center;
-    background-size: 17rem;
-    background-repeat: no-repeat;
-    margin-right: 20px;
-}
-
-.teams div:hover{
-    background-color: rgb(204, 204, 204);
-}
-
-.lfc{
-    background-image: url(img/liverpool.png);
-}
-.ars{
-    background-image: url(img/arsenal.png);
-    background-size: 14rem;
-}
-
-.tot{
-    background-image: url(img/tot.png);
-    background-size: 15rem;
-}
-
-.city{
-    background-image: url(img/city.png);
-    background-size: 12rem;
-}
-
-.chelsea{
-    background-image: url(img/chelsea.png);
-    background-size: 11rem;
 }
 .header{
   width: 100%;
@@ -129,8 +29,8 @@ body{
   background-size: cover;
   font-family: 'Secular One', sans-serif;
   font-size: 1rem;
-
 }
+
 .premier{
   background-image: url(img/premier.png);
   background-size: 50%;
@@ -155,6 +55,125 @@ body{
   background-color: rgba(255, 255, 255, 0.704);
   padding-right: 5%;
 }
+/* Styling for the about section */
+#about{
+  box-shadow:
+  1px 2.6px 13.8px rgba(0, 0, 0, 0.121),
+  2.3px 6.3px 33.3px rgba(0, 0, 0, 0.166),
+  4.4px 11.8px 62.6px rgba(0, 0, 0, 0.193),
+  7.8px 21px 111.7px rgba(0, 0, 0, 0.204),
+  14.6px 39.3px 208.9px rgba(0, 0, 0, 0.198),
+  35px 94px 500px rgba(0, 0, 0, 0.16);
+  color: rgb(53, 10, 62);
+  width: 60%;
+  height: fit-content;
+  padding: 7%;
+  background-color: rgb(219, 219, 219);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  word-wrap: break-word;
+  font-size: 1.2rem;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Raleway', sans-serif;
+  margin-block: 8%;  
+}
+
+
+/* Styling for the title */
+#title{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  width: fit-content;
+  margin: auto;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-family: 'Secular One', sans-serif;
+  height: 8vh;
+  color: rgb(53, 10, 62);
+  margin-bottom: 5%;
+}
+
+
+
+/* Styling for the teams section */
+.teams{
+  display: flex;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 35vh;
+  margin-bottom: 10%;
+}
+
+/* Styling for each individual team element */
+.teams > *{
+  box-shadow:
+  1px 2.6px 13.8px rgba(0, 0, 0, 0.121),
+  2.3px 6.3px 33.3px rgba(0, 0, 0, 0.166),
+  4.4px 11.8px 62.6px rgba(0, 0, 0, 0.193),
+  7.8px 21px 111.7px rgba(0, 0, 0, 0.204),
+  14.6px 39.3px 208.9px rgba(0, 0, 0, 0.198),
+  35px 94px 500px rgba(0, 0, 0, 0.16);
+  flex: 1;
+  background-position: center;
+  background-size: 17rem;
+  background-repeat: no-repeat;
+  margin-right: 20px;
+}
+
+/* Putting color effects team elements */
+.teams div:hover{
+  background-color: rgb(204, 204, 204);
+}
+
+/* TEAM 1 */
+.lfc{
+  background-image: url(img/liverpool.png);
+}
+
+/* TEAM 2 */
+.ars{
+  background-image: url(img/arsenal.png);
+  background-size: 14rem;
+}
+
+/* TEAM 3 */
+.tot{
+  background-image: url(img/tot.png);
+  background-size: 15rem;
+}
+
+/* TEAM 4 */
+.city{
+  background-image: url(img/city.png);
+  background-size: 12rem;
+}
+
+/* TEAM 5 */
+.chelsea{
+  background-image: url(img/chelsea.png);
+  background-size: 11rem;
+}
+
+/* MAIN PART WHERE THE PLAYER SELECTION AND THE FIELD IS LOCATED*/
+#fmu{
+  width: 90%;
+  margin:auto;
+  background-color: rgb(235, 235, 235);
+  flex-direction: column;
+  height: fit-content;
+}
+
+#fmu > *{
+  margin-bottom: 5%;
+}
+
+
+/* PLAYER SELECTION BOX WHICH IS A GRID*/
 .parent {
   box-shadow:
   1px 2.6px 13.8px rgba(0, 0, 0, 0.121),
@@ -163,209 +182,214 @@ body{
   7.8px 21px 111.7px rgba(0, 0, 0, 0.204),
   14.6px 39.3px 208.9px rgba(0, 0, 0, 0.198),
   35px 94px 500px rgba(0, 0, 0, 0.16);
-    width: 70%;
-    margin: auto;
-    padding-bottom: 6%;
-    margin-bottom: 10%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(14, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 50px;
-    
-    }
-    .info{
-        width: 100%;
-        height: 8vh;
-        display: flex;
-        border-radius: 15%;
-      }
-    
-      .info > *{
-        background-color: rgba(45, 46, 46, 0.544);
-        background-color: radial-gradient(circle, rgba(45,46,46,1) 0%, rgba(99,99,99,1) 84%);
-        color: rgba(255, 255, 255, 0.794);
-        text-align: center;
-        justify-content: center;
-        align-items: center;
-        display: flex;
-        font-family: 'Secular One', sans-serif;
-      }
-      #player:hover{
-        background-color: black;
-      }
-    
-      .number{
-        background-color: white;
-        color: black;
-        font-size: 2rem;
-        flex: 1;
-      }
-    
-      .name{
-        background-color: rgba(0, 0, 0, 0.819);
-        text-transform: uppercase;
-        flex: 2;
-        font-size: 0.8rem;
-      }
-      #player{
-        cursor: pointer;
-        margin-right: auto;
-        margin-left: auto;
-        margin-top: -30px;
-        border-radius: 15%;
-        height: 20vh;
-        width: 150px;
-        display: flex; 
-        align-items: flex-end; 
-        text-align: center;
-        justify-content: center;
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-color: rgb(45,46,46);
-        background-color: radial-gradient(circle, rgba(45,46,46,1) 0%, rgba(99,99,99,1) 84%);
-      }
-    
-    .div1 { grid-area: 1 / 1 / 2 / 4;}
-    .div2 { grid-area: 2 / 1 / 3 / 2; background-image: url(img/degea.png);}
-    .div3 { grid-area: 2 / 2 / 3 / 3;background-image: url(img/heaton.png); }
-    .div4 { grid-area: 3 / 1 / 4 / 4;}
-    .div5 { grid-area: 4 / 1 / 5 / 2; background-image: url(img/lindelof.png);}
-    .div6 { grid-area: 4 / 2 / 5 / 3; background-image: url(img/maguire.png);}
-    .div7 { grid-area: 4 / 3 / 5 / 4; background-image: url(img/martinez.png);}
-    .div8 { grid-area: 5 / 1 / 6 / 2; background-image: url(img/malacia.png);}
-    .div9 { grid-area: 5 / 2 / 6 / 3; background-image: url(img/varane.png);}
-    .div10 { grid-area: 5 / 3 / 6 / 4; background-image: url(img/dalot.png);}
-    .div11 { grid-area: 6 / 1 / 7 / 2;background-image: url(img/shaw.png);}
-    .div12 { grid-area: 6 / 2 / 7 / 3; background-image: url(img/wanbissaka.png);}
-    .div13 { grid-area: 7 / 1 / 8 / 4;}
-    .div14 { grid-area: 8 / 1 / 9 / 2; background-image: url(img/bruno.png);}
-    .div15 { grid-area: 8 / 2 / 9 / 3;background-image: url(img/eriksen.png);}
-    .div16 { grid-area: 8 / 3 / 9 / 4; background-image: url(img/sabitzer.png);}
-    .div17 { grid-area: 9 / 1 / 10 / 2;background-image: url(img/fred.png);}
-    .div18 { grid-area: 9 / 2 / 10 / 3;background-image: url(img/casemiro.png); }
-    .div19 { grid-area: 9 / 3 / 10 / 4; background-image: url(img/pellistri.png);}
-    .div20 { grid-area: 10 / 1 / 11 / 2;background-image: url(img/vandebeek.png);}
-    .div21 { grid-area: 10 / 2 / 11 / 3;background-image: url(img/mctominay.png); }
-    .div26 { grid-area: 10 / 3 / 11 / 4; background-image: url(img/sancho.png);}
-    .div25 { grid-area: 11 / 1 / 11 / 2;background-image: url(img/antony.png); }
-    .div28 { grid-area: 11 / 2 / 11 / 2; background-image: url(img/elanga.png);}
-    .div22 { grid-area: 12 / 1 / 12 / 4;}
-    .div23 { grid-area: 13 / 3 / 14 / 3;background-image: url(img/martial.png);}
-    .div27 { grid-area: 13 / 1 / 14 / 2; background-image: url(img/weghorst.png);}
-    .div24 { grid-area: 13 / 2 / 14 / 2; background-image: url(img/marcus.png);}
-    .div29 { grid-area: 14 / 1 / 15 / 2; background-image: url(img/garnacho.png);} 
+  width: 70%;
+  margin: auto;
+  padding-bottom: 6%;
+  margin-bottom: 10%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(14, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 50px; 
+}
 
-#title2{
-    color: white;
-    background-color: rgb(46, 159, 11);
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 30px;
-    font-size: 2rem;
-    font-family: 'Secular One', sans-serif;
+/* Player name and invisible points*/
+.info{
+  width: 100%;
+  height: 8vh;
+  display: flex;
+  border-radius: 15%;
+}  
+
+.info > *{
+  background-color: rgba(45, 46, 46, 0.544);
+  background-color: radial-gradient(circle, rgba(45,46,46,1) 0%, rgba(99,99,99,1) 84%);
+  color: rgba(255, 255, 255, 0.794);
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-family: 'Secular One', sans-serif;
+}
+
+/*Cool effect on the background*/
+#player:hover{
+  background-color: black;
+}
+
+.number{
+  background-color: white;
+  color: black;
+  font-size: 2rem;
+  flex: 1;
+}
+    
+.name{
+  background-color: rgba(0, 0, 0, 0.819);
+  text-transform: uppercase;
+  flex: 2;
+  font-size: 0.8rem;
+}
+
+/* Settings for every player box*/
+#player{
+  cursor: pointer;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: -30px;
+  border-radius: 15%;
+  height: 20vh;
+  width: 150px;
+  display: flex; 
+  align-items: flex-end; 
+  text-align: center;
+  justify-content: center;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgb(45,46,46);
+  background-color: radial-gradient(circle, rgba(45,46,46,1) 0%, rgba(99,99,99,1) 84%);
 }
 .points{
-    font-size: 0rem;
+  font-size: 0rem;
 }
 
+/* Grid positioning for each player*/   
+.div1 { grid-area: 1 / 1 / 2 / 4;}
+.div2 { grid-area: 2 / 1 / 3 / 2; background-image: url(img/degea.png);}
+.div3 { grid-area: 2 / 2 / 3 / 3;background-image: url(img/heaton.png); }
+.div4 { grid-area: 3 / 1 / 4 / 4;}
+.div5 { grid-area: 4 / 1 / 5 / 2; background-image: url(img/lindelof.png);}
+.div6 { grid-area: 4 / 2 / 5 / 3; background-image: url(img/maguire.png);}
+.div7 { grid-area: 4 / 3 / 5 / 4; background-image: url(img/martinez.png);}
+.div8 { grid-area: 5 / 1 / 6 / 2; background-image: url(img/malacia.png);}
+.div9 { grid-area: 5 / 2 / 6 / 3; background-image: url(img/varane.png);}
+.div10 { grid-area: 5 / 3 / 6 / 4; background-image: url(img/dalot.png);}
+.div11 { grid-area: 6 / 1 / 7 / 2;background-image: url(img/shaw.png);}
+.div12 { grid-area: 6 / 2 / 7 / 3; background-image: url(img/wanbissaka.png);}
+.div13 { grid-area: 7 / 1 / 8 / 4;}
+.div14 { grid-area: 8 / 1 / 9 / 2; background-image: url(img/bruno.png);}
+.div15 { grid-area: 8 / 2 / 9 / 3;background-image: url(img/eriksen.png);}
+.div16 { grid-area: 8 / 3 / 9 / 4; background-image: url(img/sabitzer.png);}
+.div17 { grid-area: 9 / 1 / 10 / 2;background-image: url(img/fred.png);}
+.div18 { grid-area: 9 / 2 / 10 / 3;background-image: url(img/casemiro.png); }
+.div19 { grid-area: 9 / 3 / 10 / 4; background-image: url(img/pellistri.png);}
+.div20 { grid-area: 10 / 1 / 11 / 2;background-image: url(img/vandebeek.png);}
+.div21 { grid-area: 10 / 2 / 11 / 3;background-image: url(img/mctominay.png); }
+.div26 { grid-area: 10 / 3 / 11 / 4; background-image: url(img/sancho.png);}
+.div25 { grid-area: 11 / 1 / 11 / 2;background-image: url(img/antony.png); }
+.div28 { grid-area: 11 / 2 / 11 / 2; background-image: url(img/elanga.png);}
+.div22 { grid-area: 12 / 1 / 12 / 4;}
+.div23 { grid-area: 13 / 3 / 14 / 3;background-image: url(img/martial.png);}
+.div27 { grid-area: 13 / 1 / 14 / 2; background-image: url(img/weghorst.png);}
+.div24 { grid-area: 13 / 2 / 14 / 2; background-image: url(img/marcus.png);}
+.div29 { grid-area: 14 / 1 / 15 / 2; background-image: url(img/garnacho.png);} 
+
+#title2{
+  color: white;
+  background-color: rgb(46, 159, 11);
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  font-family: 'Secular One', sans-serif;
+}
+
+/* Styling for the main container where the football field is positioned */
+#field{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  background-image: url(img/Football_field.svg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: fit-content;
+}
+
+/* The default text meant to be replaced by player names */
 .text{
-    margin-top: -30px;
-    font-family: 'Secular One', sans-serif;
-    color: rgb(15, 95, 16);
-    margin-right: 10px;
+  margin-top: -30px;
+  font-family: 'Secular One', sans-serif;
+  color: rgb(15, 95, 16);
+  margin-right: 10px;
 }
+
+/* Styling for the points inside the brackets for each player */
 .white-text {
-    color: white;
-  }
+  color: white;
+}
 
-.title{
-    margin-right: auto;
-    margin-left: auto;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    
-  }
+/* Styling for different positions */
+.strikers{
+  height: 210px;
+}
 
-  #fmu{
-    width: 90%;
-    margin:auto;
-    background-color: rgb(235, 235, 235);
-    display: flex;
-    flex-direction: column;
-    height: fit-content;
-  }
+/* Jersey size */
+#field img{
+  height: 175px;
+}
 
+/* Image was different so i had to improvise */
+.goalie{
+  height: 50px;
+}
+
+/* Different styling  */
+.offensive-midfield,.defensive-midfield,.defense{
+  display: flex;
+  height: 210px;
+}
+
+.offensive-midfield,.defensive-midfield > *{
+  flex: 1;
+}
+
+.defense > *{
+  flex: 1;
+}
  
-  #fmu > *{
-    flex: 1;
-    margin-bottom: 5%;
-  }
+.goalkeeper{
+  height: 210px;
+}
 
-  .strikers{
-    height: 210px;
-  }
-
-  #field img{
-    height: 175px;
-  }
-
-  .goalie{
-    height: 50px;
-  }
-
-  .offensive-midfield,.defensive-midfield,.defense{
-    display: flex;
-    height: 210px;
-  }
-
-  .offensive-midfield,.defensive-midfield > *{
-    flex: 1;
-  }
-
-  .defense > *{
-    flex: 1;
-  }
- 
-  .goalkeeper{
-    height: 210px;
-  }
-  .desktop-nav{
-    width: 100%;
-    height: fit-content;
+/* Footer styling */
+.desktop-nav{
+  width: 100%;
+  height: fit-content;
 }
 
 .desktop-nav li{
-    font-size: 1.1rem;
-    margin: 0 5%;
-    list-style: none;
-    text-transform: uppercase;
-    padding-block: 30px;
+  font-size: 1.1rem;
+  margin: 0 5%;
+  list-style: none;
+  text-transform: uppercase;
+  padding-block: 30px;
 }
 
 .desktop-nav li a{
-    list-style: none;
-    color: white;
-
-    font-family: 'Raleway', sans-serif;
-    text-decoration: none;
+  list-style: none;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  text-decoration: none;
 }
+
 a{
   text-decoration: none;
 }
     
 .desktop-nav ul{
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
+
 #footer{
   width: 100%;
   height: fit-content;
@@ -375,6 +399,7 @@ a{
   text-align: center;
   justify-content: center;
 }
+
 .second-footer{
   margin-block: 3%;
 }
@@ -399,61 +424,62 @@ a{
   color: black;
 }
 
-  @media (max-width: 1200px) {
-
-#field{
+/* IMPORTANT PART FOR SMALLER SCREEN SIZES */
+@media (max-width: 1200px) {
+  #field{
   background-size: cover;
+  }
 }
+
+@media (max-width: 800px) {
+  .parent{
+    width: 90%;
   }
 
-  @media (max-width: 800px) {
-    .parent{
-      width: 90%;
-    }
-    .teams{
-      flex-direction: column;
-      width: 50%;
-      height: 200vh;
-    }
-
-    .teams > *{
-      margin-bottom: 5%;
-    }
+  .teams{
+    flex-direction: column;
+    width: 50%;
+    height: 200vh;
   }
 
-  @media (max-width: 700px) {
-    #field img{
-      height: 100px;
-    }
-    #about{
-      width: 80%;
-    }
-    .offensive-midfield,.defensive-midfield,.defense{
-      height: 130px;
-    }
-    #field{
-      width: 100%;
-    }
+  .teams > *{
+    margin-bottom: 5%;
   }
+}
 
-  @media(max-width:600px){
-    .teams{
-      width: 65%;
-    }
+@media (max-width: 700px) {
+  #field img{
+    height: 100px;
   }
+  #about{
+    width: 80%;
+  }
+  .offensive-midfield,.defensive-midfield,.defense{
+    height: 130px;
+  }
+  #field{
+    width: 100%;
+  }
+}
 
-  @media(max-width:570px){
-    .parent{
-        display: block;
-    }
-    .div1,.div4,.div13,.div22{
-      padding-block: 10%;
-    }
-    .parent > *{
-      margin-bottom: 20%;
-    }
-    #player{
-      height: 30vh;
-      width: 70%;
+@media(max-width:600px){
+  .teams{
+    width: 65%;
+  }
+}
+
+@media(max-width:570px){
+  .parent{
+    display: block;
+  }
+  .div1,.div4,.div13,.div22{
+    padding-block: 10%;
+  }
+  .parent > *{
+    margin-bottom: 20%;
+  }
+  #player{
+    height: 30vh;
+    width: 70%;
   }
 }
