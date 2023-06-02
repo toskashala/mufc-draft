@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+      <!-- Set the favicon and link to external CSS and font-awesome stylesheets -->
         <link rel="icon" type="image/png" href="img/logo.png">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="index.css">
+        <!-- Set the document metadata -->
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Set the title of the webpage -->
         <title>United portal</title>
     </head>
 
     <body>
+      <!-- Header section with navigation links -->
       <header class="header">
         <div class="desktop-nav">
           <ul>
@@ -50,6 +54,7 @@
 
       </header>
 
+      <!-- Main content sections -->
       <section id="about">
         <input type="radio" name="position"/>
         <input type="radio" name="position"/>
@@ -57,31 +62,37 @@
         <input type="radio" name="position" />
         <input type="radio" name="position" />
 
+        <!-- Carousel items with text and images showing what the web app is about -->
         <main id="carousel">
+          <!-- Carousel item 1 -->
             <div class="item">
               <div id="first" class="text-inside">Take a look at the team
                 <img src="img/team.png" alt="">
               </div>
             </div>
 
+            <!-- Carousel item 2 -->
             <div class="item">
               <div id="second" class="text-inside">Design your Man United kit
                 <img src="img/kit.png" alt="">
               </div>
             </div>
 
+            <!-- Carousel item 3 -->
             <div class="item">
               <div id="third" class="text-inside">The ultimate United Hub
                 <img src="img/logo-black.png" alt="">
               </div>
             </div>
 
+            <!-- Carousel item 4 -->
             <div class="item">
               <div id="fourth" class="text-inside">Create your FPL squad
                 <img src="img/fpl.png" alt="">
               </div>
             </div>
 
+            <!-- Carousel item 5 -->
             <div class="item">
               <div id="fifth" class="text-inside">Check the latest news
                 <img src="img/news.png" alt="">
@@ -91,8 +102,10 @@
           
       </section>
 
+      <!-- Section showing picture of the head coach of the team -->
       <section id="coach"></section>
 
+      <!-- Section dedicated to latest news about the club -->
       <section id="news">
         <div class="title">LATEST NEWS</div>
         <div class="offers">
@@ -110,6 +123,7 @@
         </div>
       </section>
 
+      <!-- IMPORTANT! This is where the game is introduced -->
       <section id="fantasy">
         <div class="premier"></div>
         <div class="fantasy-header">
@@ -119,7 +133,7 @@
           <a class="button" target="_blank" href="fmu.html">Play now</a>
         </div>
       </section>
-
+      <!-- Another part of the game where the user can design a kit based on preference -->
       <section id="design">
         <div class="title">DESIGN A KIT</div>
         <div id="shirt">
@@ -130,7 +144,8 @@
           </div>
           <div id="sleeve2"></div>
         </div>
-        
+
+        <!-- Kit design options -->
         <div id="options">
           <label for="color">Color:</label>
           <input type="color" id="color" value="#ffffff">
@@ -159,7 +174,8 @@
           </select>
         </div>
       </section>
-      
+
+      <!-- The full player gallery with shirt number, name, country of origin-->
       <section id="players">
         <div class="title">OUR PLAYERS</div>
         <div class="grid">
@@ -381,6 +397,7 @@
         </div>
       </section>
 
+      <!-- Footer of the website -->
       <section id="footer">
         <div class="first-footer">
           <div class="footer-logo">
@@ -400,7 +417,9 @@
           Developed by <a style="color: red;" target="_blank"  href="https://github.com/toskashala"> Toska</a>
         </div>
       </section>
-      
+
+      <!-- Loading the main part, the logic behind the game -->
       <script defer src=index.js></script>
+      
   </body>
 </html>
