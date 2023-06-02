@@ -1,0 +1,65 @@
+##United Portal Web App Documentation
+Link to the web app: https://toskashala.github.io/mufc-draft/index.html
+Link to the Fantasy Game specifially: https://toskashala.github.io/mufc-draft/fmu.html
+
+##Overview
+
+The Man United Fan Hub web app is a platform dedicated to Manchester United fans. It provides various features to engage with the club, including browsing through players, accessing news updates, and designing custom kits. Additionally, the web app offers a unique fantasy football game that focuses on Manchester United's home games against the big five teams.
+
+##Features
+
+
+Player Browser
+
+The player browser allows users to explore profiles of Manchester United players. Users can view player information such as name, position, and nationality. The player browser provides an easy way to learn about the players who represent the club.
+
+
+News Updates
+
+The news section keeps users updated with the latest news about Manchester United. It covers various topics such as match reports, transfer rumors, player interviews, and club announcements. Users can stay informed about the latest developments within the club.
+
+
+Kit Designer
+
+The kit designer feature enables users to create custom kits for Manchester United. Users can choose their preferred colors, logos, and sponsors to personalize their kit design. The selected elements are dynamically added to the main kit box, allowing users to see the final design. This feature enhances user creativity and engagement with the club's branding.
+
+
+Fantasy Football Game
+
+The fantasy football game in the United Portal web app offers a unique and challenging experience for users. It focuses on Manchester United's home games against the big five teams, namely Chelsea, Manchester City, Liverpool, Arsenal, and Tottenham Hotspur.
+
+    Game Setup
+        - The web app is available on the web server thanks to GitHub pages.
+
+        - User selects the opponent team for the already played match from the big five teams.
+        
+        - User picks players for each position from the Manchester United squad.
+
+        - User can change the players in the positions how many times they want.
+        
+        - Each player has assigned points based on their performance in the corresponding match that will be shown to the user at the end.
+
+    Points Calculation
+
+        - The web app retrieves the points earned by each player from the selected match. These points have been written by the developer in the HTML file.
+        - The points are loaded to the HTML interface and displayed for each player.
+        - Only the points from the game against the selected opponent team are shown on the field.
+        - The user must have advanced knowledge of football and be familiar with the specific positions of each Manchester United player to earn successful points.
+
+    Total Points Calculation
+
+        - The overall points from each player's performance are calculated and aggregated.
+        - The total points earned by the user are displayed at the end of the players selection.
+        - This provides a measure of the user's success in selecting the lineup for the chosen match.
+
+    Game Progression
+
+        - To continue selecting a lineup for another match against a different opponent, the user can simply click on the desired opponent team.
+        - The points automatically reset to zero, and the user can start the player pick process from the beginning.
+        - This allows users to engage in multiple fantasy football matchups and track their performance against different opponents.
+
+
+Conclusion
+
+The United Portal web app provides a platform for Manchester United fans to engage with their favorite club. A lot of United fans wish to have a FPL game that lets you choose only United players and I have finally created it.  With features such as player browsing, news updates, kit designing, and the unique fantasy football game, the web app offers a rich and immersive experience for fans. Whether users want to stay informed, showcase their creativity, or test their football knowledge, the United Portal web app caters to their needs.
+
