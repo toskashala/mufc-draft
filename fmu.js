@@ -85,56 +85,53 @@ $(document).ready(function() {
       });
     });
   
-   // Function to show players based on the selected team
-// Function to show players based on the selected team
-function showPlayers(team) {
-    // Reset total points
-    var totalPoints = 0;
-  
-    // Remove the points from the parentheses and reset to 0
-    $(".position-player .white-text").text(function () {
-      $(this).text("0");
-    });
-  
-    // Get all player elements
-    const playerDivs = document.querySelectorAll('#choose .parent > div[id^="player"]');
-  
-    // Iterate over each player div
-    playerDivs.forEach(playerDiv => {
-      const pointsDivs = playerDiv.querySelectorAll('.points div');
-  
-      // Hide all points divs
-      pointsDivs.forEach(pointsDiv => {
-        pointsDiv.style.display = 'none';
-      });
-  
-      // Show points div corresponding to the selected team
-      const teamPointsDiv = playerDiv.querySelector(`.${team}-points`);
-      if (teamPointsDiv) {
-        teamPointsDiv.style.display = 'block';
-        totalPoints += parseInt(teamPointsDiv.textContent) || 0;
-      }
-    });
-  
-    // Update the selected team
-    selectedTeam = team;
-  
-    // Calculate and display the total points for selected players in field positions
-    var totalPointsField = calculateTotalPoints();
-    $("#title2").text("Total Points: " + totalPointsField);
-  
-    // Function to calculate the total points for selected players in field positions
-    function calculateTotalPoints() {
+    // Function to show player points based on the selected team
+    function showPlayers(team) {
+      // Reset total points
       var totalPoints = 0;
-      $(".position-player .white-text").each(function () {
-        var points = parseInt($(this).text()) || 0;
-        totalPoints += points;
+  
+      // Remove the points from the parentheses and reset to 0
+      $(".position-player .white-text").text(function () {
+      $(this).text("0");
       });
-      return totalPoints;
+  
+      // Get all player elements
+      const playerDivs = document.querySelectorAll('#choose .parent > div[id^="player"]');
+  
+      // Iterate over each player div
+      playerDivs.forEach(playerDiv => {
+        const pointsDivs = playerDiv.querySelectorAll('.points div');
+  
+        // Hide all points divs
+        pointsDivs.forEach(pointsDiv => {
+          pointsDiv.style.display = 'none';
+        });
+  
+        // Show points div corresponding to the selected team
+        const teamPointsDiv = playerDiv.querySelector(`.${team}-points`);
+          if (teamPointsDiv) {
+            teamPointsDiv.style.display = 'block';
+            totalPoints += parseInt(teamPointsDiv.textContent) || 0;
+          }
+      });
+  
+      // Update the selected team
+      selectedTeam = team;
+  
+      // Calculate and display the total points for selected players in field positions
+      var totalPointsField = calculateTotalPoints();
+      $("#title2").text("Total Points: " + totalPointsField);
+  
+      // Function to calculate the total points for selected players in field positions
+      function calculateTotalPoints() {
+        var totalPoints = 0;
+        $(".position-player .white-text").each(function () {
+          var points = parseInt($(this).text()) || 0;
+          totalPoints += points;
+        });
+        return totalPoints;
+      }
     }
-  }
-  
-  
   
     // Hide all points initially
     const pointsDivs = document.querySelectorAll('.points div');

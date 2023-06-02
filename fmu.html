@@ -1,443 +1,523 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" href="fmu.css">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fantasy MU</title>
-</head>
-<body>
-    
-    <div class="header">
-        <div class="premier"></div>
-        <div class="fantasy-header">
-            <h1>You have entered the MUFC FPL World</h1> 
-            <p>What players would you have picked on our Big 5 home last season?</p>
-            <p>Play the game and see how many points you would have gotten.</p>
+    <head>
+        <link rel="icon" type="image/png" href="img/logo.png">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <link rel="stylesheet" href="fmu.css">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fantasy MU</title>
+    </head>
+    <body>
+        <!-- Header section -->
+        <div class="header">
+            <div class="premier"></div>
+            <div class="fantasy-header">
+                <h1>You have entered the MUFC FPL World</h1> 
+                <p>What players would you have picked on our Big 5 home last season?</p>
+                <p>Play the game and see how many points you would have gotten.</p>
+            </div>
         </div>
-    </div>
-    <section id="about">Do you think you could do better than Ten Hag when it came to our home matches against the Big 5 this season?
-    Pick the opponent, pick your desired players without having clues about their performance and see how many Fantasy Points you could get with your lineup!
     
-    If you want to change the opponent, simply click on the desired one and re-pick the players 
-     Points are taken from the official FPL database and calculated for you.
-    </section>
-    <div id="title">Choose the opponent:</div>
-    <section class="teams">
-    <div class="lfc"></div>
-    <div class="ars"></div>
-    <div class="tot"></div>
-    <div class="city"></div>
-    <div class="chelsea"></div>
-    </section>
-    <section id="fmu">
-        <section id="choose">
-        <div class="parent">
-            <div id="title" class="div1">Choose 1 goalkeeper</div>
-            <div id="player" class="div2">
-                <div class="info">
-                  <div class="number">1</div>
-                  <div class="name">De Gea
+         <!-- About section -->
+         <section id="about">
+            Do you think you could do better than Ten Hag when it came to our home matches against the Big 5 this season?
+            Pick the opponent, pick your desired players without having clues about their performance and see how many Fantasy Points you could get with your lineup!
+            If you want to change the opponent, simply click on the desired one and re-pick the players.
+            Points are taken from the official FPL database and calculated for you.
+        </section>
+    
+        <!-- Choose opponent section -->
+        <div id="title">Choose the opponent:</div>
+        <section class="teams">
+            <div class="lfc"></div>
+            <div class="ars"></div>
+            <div class="tot"></div>
+            <div class="city"></div>
+            <div class="chelsea"></div>
+        </section>
+    
+        <!-- Player selection section -->
+        <section id="fmu">
+            <section id="choose">
+                <div class="parent">
+                    <!-- Section to choose a goalkeeper -->
+                    <div id="title" class="div1">Choose 1 goalkeeper</div>
+                    <div id="player" class="div2">
+                        <div class="info">
+                            <div class="number">1</div>
+                            <div class="name">De Gea</div>
+                            <!-- THE IMPORTANT DATA TAKEN FROM FANTASY PL -->
+                            <div class="points">
+                                <div class="lfc-points">3</div>
+                                <div class="ars-points">2</div>
+                                <div class="tot-points">6</div>
+                                <div class="city-points">2</div>
+                                <div class="chelsea-points">3</div>
+                            </div>
+                        </div>
                   </div>
-                  <div class="points">
-                  <div class="lfc-points">3</div>
-                  <div class="ars-points">2</div>
-                  <div class="tot-points">6</div>
-                  <div class="city-points">2</div>
-                  <div class="chelsea-points">3</div></div>
-                </div>
-              </div>
+    
+                    <div id="player" class="div3">
+                        <div class="info">
+                            <div class="number">22</div>
+                            <div class="name">Heaton</div>
+                            <!-- THE IMPORTANT DATA TAKEN FROM FANTASY PL -->
+                            <div class="points">
+                                <div class="lfc-points">0</div>
+                                <div class="ars-points">0</div>
+                                <div class="tot-points">0</div>
+                                <div class="city-points">0</div>
+                                <div class="chelsea-points">0</div>
+                            </div>
+                        </div> 
+                    </div>
 
-            <div id="player" class="div3">
-                <div class="info">
-                    <div class="number">22</div>
-                    <div class="name">Heaton
-                    </div>
-                    <div class="points">
-                    <div class="lfc-points">0</div>
-                  <div class="ars-points">0</div>
-                  <div class="tot-points">0</div>
-                  <div class="city-points">0</div>
-                  <div class="chelsea-points">0</div></div>
-                  </div> 
-                </div>
-
-            <div id="title" class="div4">Choose 4 defenders</div>
-            <div id="player" class="div5"> 
-                <div class="info">
-                    <div class="number">2</div>
-                    <div class="name">Lindelof<br>
-                    </div>
-                    <div class="points">
-                    <div class="lfc-points">0</div>
-                  <div class="ars-points">0</div>
-                  <div class="tot-points">0</div>
-                  <div class="city-points">0</div>
-                  <div class="chelsea-points">2</div></div>
-                  </div>
-            </div>
-            <div id="player" class="div6">
-                <div class="info">
-                    <div class="number">5</div>
-                    <div class="name">Maguire
-                    </div>
-                    <div class="points">
-                    <div class="lfc-points">0</div>
-                  <div class="ars-points">0</div>
-                  <div class="tot-points">0</div>
-                  <div class="city-points">1</div>
-                  <div class="chelsea-points">0</div></div>
-                  </div> 
-                </div>
-            <div id="player" class="div7">
-                <div class="info">
-                    <div class="number">6</div>
-                    <div class="name">Martinez
-                    </div>
-                    <div class="points">
-                    <div class="lfc-points">2</div>
-                  <div class="ars-points">2</div>
-                  <div class="tot-points">6</div>
-                  <div class="city-points">1</div>
-                  <div class="chelsea-points">0</div></div>
-                  </div> 
-                </div>
-            <div id="player" class="div8">
-                <div class="info">
-                    <div class="number">12</div>
-                    <div class="name">Malacia
-                  </div>
-                  <div class="points">
-                  <div class="lfc-points">2</div>
-                  <div class="ars-points">2</div>
-                  <div class="tot-points">0</div>
-                  <div class="city-points">2</div>
-                  <div class="chelsea-points">0</div></div>
-                </div>
-                 </div>
-            <div id="player" class="div9"> 
-                <div class="info">
-                    <div class="number">19</div>
-                    <div class="name">Varane
-                  </div>
-                  <div class="points">
-                  <div class="lfc-points">1</div>
-                  <div class="ars-points">2</div>
-                  <div class="tot-points">6</div>
-                  <div class="city-points">2</div>
-                  <div class="chelsea-points">2</div></div>
-                </div>
-            </div>
-            <div id="player" class="div10">
-                <div class="info">
-                    <div class="number">20</div>
-                    <div class="name">Dalot
-                  </div>
-                  <div class="points">
-                  <div class="lfc-points">1</div>
-                  <div class="ars-points">2</div>
-                  <div class="tot-points">6</div>
-                  <div class="city-points">0</div>
-                  <div class="chelsea-points">0</div></div>
-                </div>
-            </div>
-            <div id="player" class="div11"> 
-                <div class="info">
-                    <div class="number">23</div>
-                    <div class="name">Shaw
-                  </div>
-                  <div class="points">
-                  <div class="lfc-points">0</div>
-                  <div class="ars-points">0</div>
-                  <div class="tot-points">7</div>
-                  <div class="city-points">2</div>
-                  <div class="chelsea-points">1</div></div>
-                </div>
-            </div>
-            <div id="player" class="div12"> 
-                <div class="info">
-                    <div class="number">23</div>
-                    <div class="name">Wan-Bissaka
-                  </div>
-                  <div class="points">
-                  <div class="lfc-points">1</div>
-                  <div class="ars-points">0</div>
-                  <div class="tot-points">0</div>
-                  <div class="city-points">2</div>
-                  <div class="chelsea-points">2</div></div>
-                </div>
-            </div>
-            <div id="title" class="div13">Choose 5 midfielders</div>
-            <div id="player" class="div14">
-                <div class="info">
-                    <div class="number">8</div>
-                    <div class="name"> B.Fernandes
-                  </div>
-                  <div class="points">
-                  <div class="lfc-points">1</div>
-                  <div class="ars-points">7</div>
-                  <div class="tot-points">11</div>
-                  <div class="city-points">9</div>
-                  <div class="chelsea-points">8</div></div>
-                </div> </div>
-            <div id="player" class="div15">
-                <div class="info">
-                    <div class="number">14</div>
-                    <div class="name">Eriksen
-                  </div>
-                  <div class="points">
-                  <div class="lfc-points">2</div>
-                  <div class="ars-points">4</div>
-                  <div class="tot-points">1</div>
-                  <div class="city-points">1</div>
-                  <div class="chelsea-points">6</div>
-                </div>
-                </div> </div>
-            <div id="player" class="div16"> 
-                <div class="info">
-                    <div class="number">15</div>
-                    <div class="name">Sabitzer
-                  </div>
-                  <div class="points">
-                  <div class="lfc-points">0</div>
-                  <div class="ars-points">0</div>
-                  <div class="tot-points">0</div>
-                  <div class="city-points">0</div>
-                  <div class="chelsea-points">0</div></div>
-                </div>
-            </div>
-            <div id="player" class="div17">
-                <div class="info">
-                    <div class="number">17</div>
-                    <div class="name">Fred
-                  </div>
-                  <div class="points">
-                  <div class="lfc-points">1</div>
-                  <div class="ars-points">1</div>
-                  <div class="tot-points">10</div>
-                  <div class="city-points">1</div>
-                  <div class="chelsea-points">1</div></div>
-                </div> </div>
-            <div id="player" class="div18">
-                <div class="info">
-                    <div class="number">18</div>
-                    <div class="name">Casemiro
-                  </div>
-                  <div class="points">
-                  <div class="lfc-points">0</div>
-                  <div class="ars-points">1</div>
-                  <div class="tot-points">2</div>
-                  <div class="city-points">6</div>
-                  <div class="chelsea-points">7</div>
-                </div>
-                </div> </div>
-            <div id="player" class="div19"> 
-                <div class="info">
-                    <div class="number">28</div>
-                    <div class="name">Pellistri
-                  </div>
-                  <div class="points">
-                  <div class="lfc-points">0</div>
-                  <div class="ars-points">0</div>
-                  <div class="tot-points">0</div>
-                  <div class="city-points">0</div>
-                  <div class="chelsea-points">0</div></div>
-                </div>
-            </div>
-            <div id="player" class="div20">
-                <div class="info">
-                    <div class="number">34</div>
-                    <div class="name">Van de Beek
-                  </div>
-                  <div class="points">
-                  <div class="lfc-points">1</div>
-                  <div class="ars-points">0</div>
-                  <div class="tot-points">0</div>
-                  <div class="city-points">0</div>
-                  <div class="chelsea-points">0</div></div>
-                </div> </div>
-            <div id="player" class="div21">
-                <div class="info">
-                    <div class="number">39</div>
-                    <div class="name">McTominay
-                  </div>
-                  <div class="points">
-                  <div class="lfc-points">2</div>
-                  <div class="ars-points">1</div>
-                  <div class="tot-points">1</div>
-                  <div class="city-points">1</div>
-                  <div class="chelsea-points">1</div></div>
-                </div> </div>
-                <div id="player" class="div25">
-                    <div class="info">
-                        <div class="number">21</div>
-                        <div class="name">Antony
+                    <!-- Section to choose defenders -->
+                    <div id="title" class="div4">Choose 4 defenders</div>
+                    <div id="player" class="div5"> 
+                        <div class="info">
+                            <div class="number">2</div>
+                            <div class="name">Lindelof</div>
+                            <!-- THE IMPORTANT DATA TAKEN FROM FANTASY PL -->
+                            <div class="points">
+                                <div class="lfc-points">0</div>
+                                <div class="ars-points">0</div>
+                                <div class="tot-points">0</div>
+                                <div class="city-points">0</div>
+                                <div class="chelsea-points">2</div>
+                            </div>
                       </div>
-                      <div class="points">
-                      <div class="lfc-points">0</div>
-                      <div class="ars-points">6</div>
-                      <div class="tot-points">3</div>
-                      <div class="city-points">1</div>
-                      <div class="chelsea-points">1</div></div>
-                    </div> </div>
+                    </div>
+    
+                    <div id="player" class="div6">
+                        <div class="info">
+                            <div class="number">5</div>
+                            <div class="name">Maguire</div>
+                            <!-- THE IMPORTANT DATA TAKEN FROM FANTASY PL -->
+                            <div class="points">
+                                <div class="lfc-points">0</div>
+                                <div class="ars-points">0</div>
+                                <div class="tot-points">0</div>
+                                <div class="city-points">1</div>
+                                <div class="chelsea-points">0</div>
+                            </div>
+                        </div> 
+                    </div>
+    
+                    <div id="player" class="div7">
+                        <div class="info">
+                            <div class="number">6</div>
+                            <div class="name">Martinez</div>
+                            <!-- THE IMPORTANT DATA TAKEN FROM FANTASY PL -->
+                            <div class="points">
+                                <div class="lfc-points">2</div>
+                                <div class="ars-points">2</div>
+                                <div class="tot-points">6</div>
+                                <div class="city-points">1</div>
+                                <div class="chelsea-points">0</div>
+                            </div>
+                      </div> 
+                    </div>
+    
+                    <div id="player" class="div8">
+                        <div class="info">
+                            <div class="number">12</div>
+                            <div class="name">Malacia</div>
+                            <!-- THE IMPORTANT DATA TAKEN FROM FANTASY PL -->
+                            <div class="points">
+                                <div class="lfc-points">2</div>
+                                <div class="ars-points">2</div>
+                                <div class="tot-points">0</div>
+                                <div class="city-points">2</div>
+                                <div class="chelsea-points">0</div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div id="player" class="div9"> 
+                        <div class="info">
+                            <div class="number">19</div>
+                            <div class="name">Varane</div>
+                            <!-- THE IMPORTANT DATA TAKEN FROM FANTASY PL -->
+                            <div class="points">
+                                <div class="lfc-points">1</div>
+                                <div class="ars-points">2</div>
+                                <div class="tot-points">6</div>
+                                <div class="city-points">2</div>
+                                <div class="chelsea-points">2</div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div id="player" class="div10">
+                        <div class="info">
+                            <div class="number">20</div>
+                            <div class="name">Dalot</div>
+                            <!-- THE IMPORTANT DATA TAKEN FROM FANTASY PL -->
+                            <div class="points">
+                                <div class="lfc-points">1</div>
+                                <div class="ars-points">2</div>
+                                <div class="tot-points">6</div>
+                                <div class="city-points">0</div>
+                                <div class="chelsea-points">0</div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div id="player" class="div11"> 
+                        <div class="info">
+                            <div class="number">23</div>
+                            <div class="name">Shaw</div>
+                            <!-- THE IMPORTANT DATA TAKEN FROM FANTASY PL -->
+                            <div class="points">
+                                <div class="lfc-points">0</div>
+                                <div class="ars-points">0</div>
+                                <div class="tot-points">7</div>
+                                <div class="city-points">2</div>
+                                <div class="chelsea-points">1</div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div id="player" class="div12"> 
+                        <div class="info">
+                            <div class="number">23</div>
+                            <div class="name">Wan-Bissaka</div>
+                            <!-- THE IMPORTANT DATA TAKEN FROM FANTASY PL -->
+                            <div class="points">
+                                <div class="lfc-points">1</div>
+                                <div class="ars-points">0</div>
+                                <div class="tot-points">0</div>
+                                <div class="city-points">2</div>
+                                <div class="chelsea-points">2</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section to choose midfielders -->
+                    <div id="title" class="div13">Choose 5 midfielders</div>
+                    <div id="player" class="div14">
+                        <div class="info">
+                            <div class="number">8</div>
+                            <div class="name"> B.Fernandes</div>
+                            <!-- THE IMPORTANT DATA TAKEN FROM FANTASY PL -->
+                            <div class="points">
+                                <div class="lfc-points">1</div>
+                                <div class="ars-points">7</div>
+                                <div class="tot-points">11</div>
+                                <div class="city-points">9</div>
+                                <div class="chelsea-points">8</div>
+                            </div>
+                        </div> 
+                    </div>
+    
+                    <div id="player" class="div15">
+                        <div class="info">
+                            <div class="number">14</div>
+                            <div class="name">Eriksen</div>
+                            <!-- THE IMPORTANT DATA TAKEN FROM FANTASY PL -->
+                            <div class="points">
+                                <div class="lfc-points">2</div>
+                                <div class="ars-points">4</div>
+                                <div class="tot-points">1</div>
+                                <div class="city-points">1</div>
+                                <div class="chelsea-points">6</div>
+                            </div>
+                        </div> 
+                    </div>
+    
+                    <div id="player" class="div16"> 
+                        <div class="info">
+                            <div class="number">15</div>
+                            <div class="name">Sabitzer</div>
+                            <!-- THE IMPORTANT DATA TAKEN FROM FANTASY PL -->
+                            <div class="points">
+                                <div class="lfc-points">0</div>
+                                <div class="ars-points">0</div>
+                                <div class="tot-points">0</div>
+                                <div class="city-points">0</div>
+                                <div class="chelsea-points">0</div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div id="player" class="div17">
+                        <div class="info">
+                            <div class="number">17</div>
+                            <div class="name">Fred</div>
+                            <!-- THE IMPORTANT DATA TAKEN FROM FANTASY PL -->
+                            <div class="points">
+                                <div class="lfc-points">1</div>
+                                <div class="ars-points">1</div>
+                                <div class="tot-points">10</div>
+                                <div class="city-points">1</div>
+                                <div class="chelsea-points">1</div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div id="player" class="div18">
+                        <div class="info">
+                            <div class="number">18</div>
+                            <div class="name">Casemiro</div>
+                            <!-- THE IMPORTANT DATA TAKEN FROM FANTASY PL -->
+                            <div class="points">
+                                <div class="lfc-points">0</div>
+                                <div class="ars-points">1</div>
+                                <div class="tot-points">2</div>
+                                <div class="city-points">6</div>
+                                <div class="chelsea-points">7</div>
+                            </div>
+                        </div> 
+                    </div>
+    
+                    <div id="player" class="div19"> 
+                        <div class="info">
+                            <div class="number">28</div>
+                            <div class="name">Pellistri</div>
+                            <!-- THE IMPORTANT DATA TAKEN FROM FANTASY PL -->
+                            <div class="points">
+                                <div class="lfc-points">0</div>
+                                <div class="ars-points">0</div>
+                                <div class="tot-points">0</div>
+                                <div class="city-points">0</div>
+                                <div class="chelsea-points">0</div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div id="player" class="div20">
+                        <div class="info">
+                            <div class="number">34</div>
+                            <div class="name">Van de Beek</div>
+                            <!-- THE IMPORTANT DATA TAKEN FROM FANTASY PL -->
+                            <div class="points">
+                                <div class="lfc-points">1</div>
+                                <div class="ars-points">0</div>
+                                <div class="tot-points">0</div>
+                                <div class="city-points">0</div>
+                                <div class="chelsea-points">0</div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div id="player" class="div21">
+                        <div class="info">
+                            <div class="number">39</div>
+                            <div class="name">McTominay</div>
+                            <!-- THE IMPORTANT DATA TAKEN FROM FANTASY PL -->
+                            <div class="points">
+                                <div class="lfc-points">2</div>
+                                <div class="ars-points">1</div>
+                                <div class="tot-points">1</div>
+                                <div class="city-points">1</div>
+                                <div class="chelsea-points">1</div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div id="player" class="div25">
+                        <div class="info">
+                            <div class="number">21</div>
+                            <div class="name">Antony</div>
+                            <!-- THE IMPORTANT DATA TAKEN FROM FANTASY PL -->
+                            <div class="points">
+                                <div class="lfc-points">0</div>
+                                <div class="ars-points">6</div>
+                                <div class="tot-points">3</div>
+                                <div class="city-points">1</div>
+                                <div class="chelsea-points">1</div>
+                            </div>
+                        </div>
+                    </div>
+    
                     <div id="player" class="div26">
                         <div class="info">
                             <div class="number">25</div>
-                            <div class="name">Sancho
-                          </div>
-                          <div class="points">
-                          <div class="lfc-points">10</div>
-                          <div class="ars-points">2</div>
-                          <div class="tot-points">6</div>
-                          <div class="city-points">0</div>
-                          <div class="chelsea-points">7</div></div>
-                        </div> </div>
-                        <div id="player" class="div28">
-                            <div class="info">
-                                <div class="number">36</div>
-                                <div class="name">Elanga
-                              </div>
-                              <div class="points">
-                              <div class="lfc-points">4</div>
-                              <div class="ars-points">0</div>
-                              <div class="tot-points">1</div>
-                              <div class="city-points">0</div>
-                              <div class="chelsea-points">0</div>
+                            <div class="name">Sancho</div>
+                            <!-- THE IMPORTANT DATA TAKEN FROM FANTASY PL -->
+                            <div class="points">
+                                <div class="lfc-points">10</div>
+                                <div class="ars-points">2</div>
+                                <div class="tot-points">6</div>
+                                <div class="city-points">0</div>
+                                <div class="chelsea-points">7</div>
                             </div>
-                            </div> </div>
-            <div id="title" class="div22">Choose 1 striker</div>
-            <div id="player" class="div23"> 
-                <div class="info">
-                    <div class="number">9</div>
-                    <div class="name">Martial
-                  </div>
-                  <div class="points">
-                  <div class="lfc-points">4</div>
-                  <div class="ars-points">0</div>
-                  <div class="tot-points">0</div>
-                  <div class="city-points">1</div>
-                  <div class="chelsea-points">7</div></div>
-                </div>
-            </div>
-            <div id="player" class="div24">
-                <div class="info">
-                    <div class="number">10</div>
-                    <div class="name">Rashford
-                  </div>
-                  <div class="points">
-                  <div class="lfc-points">10</div>
-                  <div class="ars-points">18</div>
-                  <div class="tot-points">3</div>
-                  <div class="city-points">10</div>
-                  <div class="chelsea-points">7</div></div>
-                </div> </div>
-            
-            
-            <div id="player" class="div27"> 
-                <div class="info">
-                    <div class="number">27</div>
-                    <div class="name">Weghorst
-                  </div>
-                  <div class="points">
-                  <div class="lfc-points">0</div>
-                  <div class="ars-points">0</div>
-                  <div class="tot-points">0</div>
-                  <div class="city-points">0</div>
-                  <div class="chelsea-points">0</div></div>
-                </div>
-            </div>
-            
-            <div id="player" class="div29">
-                <div class="info">
-                    <div class="number">49</div>
-                    <div class="name">Garnacho
-                  </div>
-                  <div class="points">
-                  <div class="lfc-points">0</div>
-                  <div class="ars-points">0</div>
-                  <div class="tot-points">0</div>
-                  <div class="city-points">4</div>
-                  <div class="chelsea-points">1</div></div>
-                </div> </div>
-            </div> 
-        </section>
-        <div id="title2"></div>
-        <section id="field">
-            <div class="strikers">
-                <img src="img/manu-kit-removebg-preview.png" alt="">
-                <div id="striker" class="text">Striker</div>
-            </div>
-            <div class="offensive-midfield">
-                <div>
-                    <img src="img/manu-kit-removebg-preview.png" alt="">
-                    <div id="left-wing" class="text">Left Wing</div>
-                </div>
-                <div>
-                    <img src="img/manu-kit-removebg-preview.png" alt="">
-                    <div id="cam" class="text">Attacking Midfield</div>
-                </div>
-                <div>
-                    <img src="img/manu-kit-removebg-preview.png" alt="">
-                    <div id="right-wing" class="text">Right Wing</div>
-                </div>
-            </div>
-            <div class="defensive-midfield">
-                <div>
-                    <img src="img/manu-kit-removebg-preview.png" alt="">
-                    <div id="cdm" class="text">Defensive Midfield</div>
-                </div>
-                <div>
-                    <img src="img/manu-kit-removebg-preview.png" alt="">
-                    <div id="cdm2" class="text">Defensive Midfield</div>
-                </div>
-            </div>
-            <div class="defense">
-                <div>
-                    <img src="img/manu-kit-removebg-preview.png" alt="">
-                    <div id="lb" class="text">Left Back</div>
-                </div>
-                <div>
-                    <img src="img/manu-kit-removebg-preview.png" alt="">
-                    <div id="cb1" class="text">Centre Back</div>
-                </div>
-                <div>
-                    <img src="img/manu-kit-removebg-preview.png" alt="">
-                    <div id="cb2" class="text">Centre Back</div>
-                </div>
-                <div>
-                    <img src="img/manu-kit-removebg-preview.png" alt="">
-                    <div id="rb" class="text">Right Back</div>
-                </div>
-            </div>
-            <div class="goalkeeper">
-                <div>
-                    <img class="goalie" src="img/goalie.png" alt="">
-                    <div id="goalie" class="text">Goalkeeper</div>
-                </div>
-            </div>
+                        </div> 
+                    </div>
+    
+                    <div id="player" class="div28">
+                        <div class="info">
+                            <div class="number">36</div>
+                            <div class="name">Elanga</div>
+                            <!-- THE IMPORTANT DATA TAKEN FROM FANTASY PL -->
+                            <div class="points">
+                                <div class="lfc-points">4</div>
+                                <div class="ars-points">0</div>
+                                <div class="tot-points">1</div>
+                                <div class="city-points">0</div>
+                                <div class="chelsea-points">0</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Section to choose a striker -->
+                    <div id="title" class="div22">Choose 1 striker</div>
+                    <div id="player" class="div23"> 
+                        <div class="info">
+                            <div class="number">9</div>
+                            <div class="name">Martial</div>
+                            <!-- THE IMPORTANT DATA TAKEN FROM FANTASY PL -->
+                            <div class="points">
+                                <div class="lfc-points">4</div>
+                                <div class="ars-points">0</div>
+                                <div class="tot-points">0</div>
+                                <div class="city-points">1</div>
+                                <div class="chelsea-points">7</div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div id="player" class="div24">
+                        <div class="info">
+                            <div class="number">10</div>
+                            <div class="name">Rashford</div>
+                            <!-- THE IMPORTANT DATA TAKEN FROM FANTASY PL -->
+                            <div class="points">
+                                <div class="lfc-points">10</div>
+                                <div class="ars-points">18</div>
+                                <div class="tot-points">3</div>
+                                <div class="city-points">10</div>
+                                <div class="chelsea-points">7</div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div id="player" class="div27"> 
+                        <div class="info">
+                            <div class="number">27</div>
+                            <div class="name">Weghorst</div>
+                            <!-- THE IMPORTANT DATA TAKEN FROM FANTASY PL -->
+                            <div class="points">
+                                <div class="lfc-points">0</div>
+                                <div class="ars-points">0</div>
+                                <div class="tot-points">0</div>
+                                <div class="city-points">0</div>
+                                <div class="chelsea-points">0</div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div id="player" class="div29">
+                        <div class="info">
+                            <div class="number">49</div>
+                            <div class="name">Garnacho</div>
+                            <!-- THE IMPORTANT DATA TAKEN FROM FANTASY PL -->
+                            <div class="points">
+                                <div class="lfc-points">0</div>
+                                <div class="ars-points">0</div>
+                                <div class="tot-points">0</div>
+                                <div class="city-points">4</div>
+                                <div class="chelsea-points">1</div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
             </section>
 
+            <!-- This is where the total points of the game are displayed -->
+            <div id="title2"></div>
 
+            <!-- The football field design with all the positions inside -->
+            <section id="field">
 
-    </section>
-    <section id="footer">
-        <div class="first-footer">
-        <div class="footer-logo">
-          <img src="img/logo.png" alt="">
-        </div>
-        <div class="desktop-nav">
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a style="color:rgb(25, 211, 25)" href="#fmu">FMU</a></li>
-            </ul>
-        </div>
-      </div>
-      <div class="second-footer">Developed by <a style="color: red;" target="_blank" href="https://github.com/toskashala"> Toska</a></div>
-      </section>
+                <!-- Striker position -->
+                <div class="strikers">
+                    <img src="img/manu-kit-removebg-preview.png" alt="">
+                    <div id="striker" class="text">Striker</div>
+                </div>
 
-<script defer src=fmu.js></script>
-</body>
+                 <!-- Offensive  midfield/attack positions -->
+                <div class="offensive-midfield">
+                    <div>
+                        <img src="img/manu-kit-removebg-preview.png" alt="">
+                        <div id="left-wing" class="text">Left Wing</div>
+                    </div>
+                    <div>
+                        <img src="img/manu-kit-removebg-preview.png" alt="">
+                        <div id="cam" class="text">Attacking Midfield</div>
+                    </div>
+                    <div>
+                        <img src="img/manu-kit-removebg-preview.png" alt="">
+                        <div id="right-wing" class="text">Right Wing</div>
+                    </div>
+                </div>
+
+                <!-- Defensive midfield positions -->
+                <div class="defensive-midfield">
+                    <div>
+                        <img src="img/manu-kit-removebg-preview.png" alt="">
+                        <div id="cdm" class="text">Defensive Midfield</div>
+                    </div>
+                    <div>
+                        <img src="img/manu-kit-removebg-preview.png" alt="">
+                        <div id="cdm2" class="text">Defensive Midfield</div>
+                    </div>
+                </div>
+
+                <!-- Defense positions -->
+                <div class="defense">
+                    <div>
+                        <img src="img/manu-kit-removebg-preview.png" alt="">
+                        <div id="lb" class="text">Left Back</div>
+                    </div>
+                    <div>
+                        <img src="img/manu-kit-removebg-preview.png" alt="">
+                        <div id="cb1" class="text">Centre Back</div>
+                    </div>
+                    <div>
+                        <img src="img/manu-kit-removebg-preview.png" alt="">
+                        <div id="cb2" class="text">Centre Back</div>
+                    </div>
+                    <div>
+                        <img src="img/manu-kit-removebg-preview.png" alt="">
+                        <div id="rb" class="text">Right Back</div>
+                    </div>
+                </div>
+
+                <!-- Goalkeeper position -->
+                <div class="goalkeeper">
+                    <div>
+                        <img class="goalie" src="img/goalie.png" alt="">
+                        <div id="goalie" class="text">Goalkeeper</div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Footer -->
+        <section id="footer">
+            <div class="first-footer">
+                <div class="footer-logo">
+                    <img src="img/logo.png" alt="">
+                </div>
+                <!-- Footer navigation menu -->
+                <div class="desktop-nav">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a style="color:rgb(25, 211, 25)" href="#fmu">FMU</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Credits -->
+            <div class="second-footer">
+                Developed by <a style="color: red;" target="_blank" href="https://github.com/toskashala">Toska</a>
+            </div>
+        </section>
+        <!-- Script/logic load -->
+        <script defer src=fmu.js></script>
+
+    </body>
 </html>
